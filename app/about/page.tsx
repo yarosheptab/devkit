@@ -37,11 +37,9 @@ export default function AboutPage() {
             <a href="https://yaro-labs.com" target="_blank" rel="noopener noreferrer">yaro-labs.com</a>.
             devkit uses a dark theme; the others use light backgrounds with accent colors.
           </p>
-          <h2>Open source</h2>
+          <h2>Built with</h2>
           <p>
-            Source code on{" "}
-            <a href="https://github.com/yaroslav-labs/devkit" target="_blank" rel="noopener noreferrer">GitHub</a>.
-            Built with Next.js 15, Tailwind CSS v4, and no external UI libraries.
+            Built with Next.js, Tailwind CSS v4, and no external UI libraries.
           </p>
         </div>
       </main>

@@ -15,7 +15,6 @@ export function Footer() {
       </span>
       <div style={{ display: "flex", gap: "16px" }}>
         {[
-          { href: "https://github.com/yaroslav-labs/devkit", label: "GitHub", external: true },
           { href: "/about", label: "About", external: false },
           { href: "/blog", label: "Blog", external: false },
         ].map(({ href, label, external }) => (
