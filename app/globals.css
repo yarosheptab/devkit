@@ -43,6 +43,84 @@
 }
 
 @layer components {
+  /* Responsive split pane: stacks vertically on mobile */
+  .split-pane {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .split-pane > *:last-child {
+    border-left: 1px solid var(--border);
+  }
+  @media (max-width: 640px) {
+    .split-pane {
+      grid-template-columns: 1fr;
+    }
+    .split-pane > *:last-child {
+      border-left: none;
+      border-top: 1px solid var(--border);
+    }
+  }
+
+  /* Responsive diff inputs grid */
+  .diff-inputs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 640px) {
+    .diff-inputs-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Responsive tool grid: 4-col desktop, 2-col tablet, 1-col mobile */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) + 1px);
+    overflow: hidden;
+  }
+  @media (max-width: 900px) {
+    .tools-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 480px) {
+    .tools-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Navbar search: hide on mobile to prevent overflow */
+  .navbar-search {
+    position: relative;
+  }
+  @media (max-width: 640px) {
+    .navbar-search {
+      display: none;
+    }
+  }
+
+  /* Responsive hero heading */
+  .hero-heading {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    color: var(--fg);
+    max-width: 500px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 640px) {
+    .hero-heading {
+      font-size: 30px;
+    }
+  }
+
   .blog-prose p {
     color: var(--muted-fg);
     line-height: 1.7;

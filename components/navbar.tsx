@@ -50,7 +50,7 @@ export function Navbar() {
         ))}
       </div>
 
-      <div style={{ position: "relative" }}>
+      <div className="navbar-search" style={{ position: "relative" }}>
         <svg
           viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
           style={{ position: "absolute", left: "10px", top: "50%", transform: "translateY(-50%)", color: "var(--muted-fg2)", width: "14px", height: "14px", pointerEvents: "none" }}

@@ -24,10 +24,7 @@ export default function HomePage() {
             <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--fg)" }} />
             Developer utilities
           </div>
-          <h1 style={{
-            fontSize: "42px", fontWeight: 700, letterSpacing: "-0.04em",
-            lineHeight: 1.1, color: "var(--fg)", maxWidth: "500px", marginBottom: "16px",
-          }}>
+          <h1 className="hero-heading">
             Tools that work.<br />
             <em style={{ fontStyle: "normal", color: "var(--muted-fg2)" }}>Nothing else.</em>
           </h1>
@@ -49,11 +46,7 @@ export default function HomePage() {
             <span style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--muted-fg2)" }}>All tools</span>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "11px", color: "var(--muted-fg2)" }}>{TOOLS.length} tools</span>
           </div>
-          <div style={{
-            display: "grid", gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "1px", background: "var(--border)",
-            border: "1px solid var(--border)", borderRadius: "calc(var(--radius) + 1px)", overflow: "hidden",
-          }}>
+          <div className="tools-grid">
             {TOOLS.map(tool => <ToolCard key={tool.slug} tool={tool} />)}
           </div>
         </section>

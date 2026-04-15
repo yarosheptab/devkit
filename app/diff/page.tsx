@@ -34,7 +34,7 @@ export default function DiffPage() {
       <Navbar />
       <ToolLayout name="Text Diff" description="Compare two texts and highlight additions and removals. Runs entirely in your browser.">
         <div style={{ padding: "20px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "16px" }}>
+          <div className="diff-inputs-grid">
             <div>
               <PaneLabel>Original</PaneLabel>
               <CodeTextarea value={left} onChange={v => { setLeft(v); setShowDiff(false) }} placeholder="Original text..." />
