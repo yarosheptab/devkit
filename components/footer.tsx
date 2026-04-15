@@ -10,19 +10,26 @@ export function Footer() {
       justifyContent: "space-between",
       padding: "0 24px",
     }}>
-      <span style={{ fontSize: "12px", color: "var(--muted-fg2)" }}>
-        {new Date().getFullYear()} devkit.yaro-labs.com
-      </span>
+      <Link
+        href="https://yaro-labs.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ fontSize: "12px", color: "var(--muted-fg2)", textDecoration: "none" }}
+      >
+        © {new Date().getFullYear()} Yaro Labs
+      </Link>
       <div style={{ display: "flex", gap: "16px" }}>
         {[
-          { href: "/about", label: "About", external: false },
-          { href: "/blog", label: "Blog", external: false },
-        ].map(({ href, label, external }) => (
+          { href: "/privacy", label: "Privacy Policy" },
+          { href: "/terms", label: "Terms of Use" },
+          { href: "/cookies", label: "Cookie Policy" },
+          { href: "/about", label: "About" },
+          { href: "/blog", label: "Blog" },
+        ].map(({ href, label }) => (
           <Link
             key={label}
             href={href}
             style={{ fontSize: "12px", color: "var(--muted-fg2)", textDecoration: "none" }}
-            {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
           >
             {label}
           </Link>

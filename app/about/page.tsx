@@ -39,7 +39,7 @@ export default function AboutPage() {
           </p>
           <h2>Built with</h2>
           <p>
-            Built with Next.js, Tailwind CSS v4, and no external UI libraries.
+            Built by <a href="https://yaro-labs.com" target="_blank" rel="noopener noreferrer">Yaro Labs</a>. Runs entirely in your browser — no server, no account.
           </p>
         </div>
       </main>
