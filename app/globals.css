@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --bg:        #000000;
+  --surface:   #09090b;
+  --muted:     #18181b;
+  --border:    #27272a;
+  --border-2:  #3f3f46;
+  --fg:        #fafafa;
+  --muted-fg:  #a1a1aa;
+  --muted-fg2: #71717a;
+  --accent:    #fafafa;
+  --accent-fg: #09090b;
+  --radius:    6px;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-surface:    var(--surface);
+  --color-muted:      var(--muted);
+  --color-border:     var(--border);
+  --color-border-2:   var(--border-2);
+  --color-muted-fg:   var(--muted-fg);
+  --color-muted-fg2:  var(--muted-fg2);
+  --color-accent:     var(--accent);
+  --color-accent-fg:  var(--accent-fg);
+  --font-sans: var(--font-geist), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --radius-default: var(--radius);
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { background: #000; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .blog-prose p {
+    color: var(--muted-fg);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .blog-prose h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--fg);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+  .blog-prose ul {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--muted-fg);
+    line-height: 1.7;
+  }
+  .blog-prose li { margin-bottom: 0.25rem; }
+  .blog-prose strong { font-weight: 600; color: var(--fg); }
+  .blog-prose code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 5px;
+  }
+  .blog-prose pre {
+    background: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+  }
+  .blog-prose pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.875rem;
+  }
+  .blog-prose a {
+    color: var(--fg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}

@@ -1,7 +1,7 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // SSG on Vercel -- no static export needed
+}
 
-export default nextConfig;
+export default nextConfig
