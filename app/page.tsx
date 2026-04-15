@@ -16,14 +16,6 @@ export default function HomePage() {
       <Navbar />
       <main>
         <section style={{ padding: "64px 24px 56px", borderBottom: "1px solid var(--border)", background: "var(--surface)" }}>
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: "6px",
-            fontFamily: "var(--font-mono)", fontSize: "11px", color: "var(--muted-fg)",
-            border: "1px solid var(--border)", borderRadius: "20px", padding: "3px 10px", marginBottom: "20px",
-          }}>
-            <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--fg)" }} />
-            Developer utilities
-          </div>
           <h1 className="hero-heading">
             Tools that work.<br />
             <em style={{ fontStyle: "normal", color: "var(--muted-fg2)" }}>Nothing else.</em>
